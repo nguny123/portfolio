@@ -6,7 +6,7 @@ export const metadata = {
   description: 'Fast, beautiful websites for small businesses using Next.js & Tailwind CSS.'
 };
 
-export default function RootLayout({ children }) {
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
       <body>

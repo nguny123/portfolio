@@ -1,4 +1,12 @@
-export function Button({ children, className = '', variant = 'solid', ...props }) {
+import { ButtonHTMLAttributes, ReactNode } from "react";
+
+type ButtonProps = {
+  children: ReactNode;
+  className?: string;
+  variant?: 'solid' | 'outline';
+} & ButtonHTMLAttributes<HTMLButtonElement>;
+
+export function Button({ children, className = '', variant = 'solid', ...props }: ButtonProps) {
   const base = "font-semibold rounded-xl transition-all";
   const variants = {
     solid: "bg-blue-600 text-white hover:bg-blue-700",
